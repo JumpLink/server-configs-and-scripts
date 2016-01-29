@@ -16,7 +16,7 @@ Anleitung und Skript um den mit Plesk betriebenen Mailserver mit "Let’s Encryp
 * Gewünschtes Zertifikat für den MailServer herunterladen (Grüner Pfeil)
 
 * Mit einem SFTP-Programm der Wahl auf den Server zugreifen (Vorsicht hier kann viel kaputt gemacht werden!):
-  sftp://root@46.4.99.115
+  sftp://user@mydomain.de
 
 ## Alternative: Neues Zertifikat mit letsencrypt erzeugen
 
