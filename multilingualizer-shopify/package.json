@@ -1,0 +1,15 @@
+{
+  "name": "multilingualizer-shopify",
+  "version": "0.0.0",
+  "description": "",
+  "main": "merge.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pascal Garber",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^0.26.5",
+    "minimist": "^1.2.0"
+  }
+}

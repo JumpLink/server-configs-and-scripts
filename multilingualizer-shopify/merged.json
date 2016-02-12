@@ -1,0 +1,578 @@
+{
+  "general": {
+    "404": {
+      "title": "....404 Seite nicht gefunden ..404 Page Not Found ....",
+      "subtext_html": "....Die von Ihnen angeforderte Seite existiert nicht. Klicken Sie <a href=\"/collections/all\">hier</a>, um den Einkauf fortzusetzen. ..The page you requested does not exist. Click <a href=\"/collections/all\">here</a> to continue shopping. ...."
+    },
+    "meta": {
+      "tags": "....Getaggt \"{{ tags }}\" ..Tagged \"{{ tags }}\" ....",
+      "page": "....Seite {{ page }} ..Page {{ page }} ...."
+    },
+    "breadcrumbs": {
+      "home": "....Startseite ..Home ....",
+      "home_link_title": "....Zurück zur Startseite ..Back to the frontpage ...."
+    },
+    "newsletter_form": {
+      "newsletter_email": "....email@beispiel.com ..email@example.com ....",
+      "submit": "....Abonnieren ..Subscribe ...."
+    },
+    "search": {
+      "no_results_html": "....Ihre Suche nach \"{{ terms }}\" hat keine Ergebnisse hervorgebracht. ..Your search for \"{{ terms }}\" did not yield any results. ....",
+      "results_for_html": "....Ihre Suche nach \"{{ terms }}\" hat folgende Ergebnisse hervorgebracht: ..Your search for \"{{ terms }}\" revealed the following: ....",
+      "title": "....Suchen Sie auf unserer Seite nach Produkten ..Search for products on our site ....",
+      "placeholder": "....Suchen ..Search ....",
+      "submit": "....Suchen ..Search ...."
+    }
+  },
+  "blogs": {
+    "article": {
+      "author_on_date_html": "....Geposted von {{ author }} am {{ date }} ..Posted by {{ author }} on {{ date }} ....",
+      "older_post": "....Älterer Post ..Older Post ....",
+      "newer_post": "....Neuerer Post ..Newer Post ....",
+      "tags": "....Tags ..Tags ....",
+      "comment_meta_html": "....{{ author }} am {{ date }} ..{{ author }} on {{ date }} ....",
+      "read_more": "....Weiterlesen ..Read more ...."
+    },
+    "comments": {
+      "title": "....Hinterlassen Sie einen Kommentar ..Leave a comment ....",
+      "name": "....Name ..Name ....",
+      "email": "....E-Mail ..Email ....",
+      "message": "....Nachricht ..Message ....",
+      "post": "....Kommentar posten ..Post comment ....",
+      "moderated": "....Bitte beachten Sie, dass Kommentare vor der Veröffentlichung freigegeben werden müssen ..Please note, comments must be approved before they are published ....",
+      "success_moderated": "....Ihr Kommentar wurde erfolgreich gepostet. Da unser Blog moderiert wird, werden wir ihn erst kurze Zeit später veröffentlichen. ..Your comment was posted successfully. We will publish it in a little while, as our blog is moderated. ....",
+      "success": "....Ihr Kommentar wurde erfolgreich gepostet. Danke! ..Your comment was posted successfully! Thank you! ....",
+      "comments_with_count": "....[object Object] ..[object Object] ...."
+    },
+    "sidebar": {
+      "recent_articles": "....Neueste Artikel ..Recent Articles ....",
+      "categories": "....Kategorien ..Categories ...."
+    }
+  },
+  "cart": {
+    "general": {
+      "title": "....Warenkorb ..Shopping Cart ....",
+      "remove": "....Entfernen ..Remove ....",
+      "note": "....Besondere Hinweise an den Verkäufer ..Special instructions for seller ....",
+      "subtotal": "....Zwischensumme ..Subtotal ....",
+      "shipping_at_checkout": "....Liefer- und Preisnachlässe werden an der Kasse generiert ..Shipping & taxes calculated at checkout ....",
+      "update": "....Warenkorb aktualisieren ..Update Cart ....",
+      "checkout": "....Zur Kasse ..Check Out ....",
+      "empty": "....Ihr Warenkorb ist im Moment leer. ..Your cart is currently empty. ....",
+      "continue_browsing_html": "....Mit der Suche <a href=\"/collections/all\">hier</a> fortfahren. ..Continue browsing <a href=\"/collections/all\">here</a>. ....",
+      "close_cart": "....Warenkorb schließen ..Close Cart ...."
+    },
+    "label": {
+      "product": "....Artikel ..Product ....",
+      "price": "....Preis ..Price ....",
+      "quantity": "....Menge ..Quantity ....",
+      "total": "....Gesamt ..Total ...."
+    }
+  },
+  "collections": {
+    "general": {
+      "all_of_collection": "....Alle {{ collection }} ..All {{ collection }} ....",
+      "no_matches": "....Es tut uns leid, aber Ihre Suche nach Produkten hat keine Treffer ergeben. ..Sorry, there are no products in this collection ....",
+      "link_title": "....Durchsuchen Sie unsere {{ title }}-Zusammenstellung ..Browse our {{ title }} collection ....",
+      "grid_view": "....Gitteransicht ..Grid view ....",
+      "list_view": "....Listenansicht ..List view ....",
+      "back_to_top": "....Zurück nach oben ..Back to top ....",
+      "items_with_count": "....[object Object] ..[object Object] ...."
+    },
+    "sidebar": {
+      "tags": "....Tags ..Tags ...."
+    },
+    "sorting": {
+      "title": "....Sortieren nach ..Sort by ....",
+      "featured": "....Ausgewählt ..Featured ....",
+      "best_selling": "....Meistverkauft ..Best Selling ....",
+      "az": "....Alphabetisch, A-Z ..Alphabetically, A-Z ....",
+      "za": "....Alphabetisch, Z-A ..Alphabetically, Z-A ....",
+      "price_ascending": "....Preis, niedrig nach hoch ..Price, low to high ....",
+      "price_descending": "....Preis, hoch nach niedrig ..Price, high to low ....",
+      "date_descending": "....Datum, neu nach alt ..Date, new to old ....",
+      "date_ascending": "....Datum, alt nach neu ..Date, old to new ...."
+    },
+    "onboarding": {
+      "modal_title": "....Auf dieser Seite werden alle Produkte Ihres Geschäfts angezeigt. ..This page will show all of your store's products ....",
+      "no_products_html": "....Es sind noch keine Produkte vorhanden, doch sobald Sie welche hinzufügen, werden sie hier angezeigt, ganz gleich, ob sie zu einer Kollektion gehören oder nicht. ..There are no products yet, but once you begin adding them they will show up here regardless if they are in a collection. ....",
+      "add_product": "....Artikel hinzufügen ..Add Product ...."
+    }
+  },
+  "contact": {
+    "form": {
+      "name": "....Name ..Name ....",
+      "email": "....E-Mail ..Email ....",
+      "phone": "....Telefonnummer ..Phone Number ....",
+      "message": "....Nachricht ..Message ....",
+      "send": "....Absenden ..Send ....",
+      "post_success": "....Danke, dass Sie uns kontaktiert haben. Wir werden uns so schnell wie möglich bei Ihnen melden. ..Thanks for contacting us. We'll get back to you as soon as possible. ...."
+    }
+  },
+  "newsletter": {
+    "form": {
+      "name": "....Vorname ..First Name ....",
+      "email": "....E-Mail Addresse ..Email Address ....",
+      "lname": "....Nachname ..Last Name ....",
+      "subscribe": "....Abonnieren ..Subscribe ....",
+      "required": "....makiert erforderliche Eingaben ..indicates required ...."
+    }
+  },
+  "customer": {
+    "account": {
+      "title": "....Mein Account ..My Account ....",
+      "details": "....Account-Details ..Account Details ....",
+      "view_addresses": "....Adressen ansehen ..View Addresses ....",
+      "return": "....Zurück zu Account-Details ..Return to Account Details ...."
+    },
+    "activate_account": {
+      "title": "....Account aktivieren ..Activate Account ....",
+      "subtext": "....Erstellen Sie ein Passwort, um Ihren Account zu aktiveren. ..Create your password to activate your account. ....",
+      "password": "....Passwort ..Password ....",
+      "password_confirm": "....Passwort bestätigen ..Confirm Password ....",
+      "submit": "....Account aktivieren ..Activate Account ....",
+      "cancel": "....Einladung ablehnen ..Decline Invitation ...."
+    },
+    "addresses": {
+      "title": "....Ihre Adressen ..Your Addresses ....",
+      "default": "....Standard ..Default ....",
+      "add_new": "....Neue Adresse hinzufügen ..Add a New Address ....",
+      "edit_address": "....Adresse bearbeiten ..Edit address ....",
+      "first_name": "....Vorname ..First Name ....",
+      "last_name": "....Nachname ..Last Name ....",
+      "company": "....Firma ..Company ....",
+      "address1": "....Adresse1 ..Address1 ....",
+      "address2": "....Adresse2 ..Address2 ....",
+      "city": "....Stadt ..City ....",
+      "country": "....Land ..Country ....",
+      "province": "....Bundesland ..Province ....",
+      "zip": "....PLZ ..Postal/Zip Code ....",
+      "phone": "....Telefon ..Phone ....",
+      "set_default": "....Als Standard-Adresse festlegen ..Set as default address ....",
+      "add": "....Adresse hinzufügen ..Add Address ....",
+      "update": "....Adresse aktualisieren ..Update Address ....",
+      "cancel": "....Abbrechen ..Cancel ....",
+      "edit": "....Bearbeiten ..Edit ....",
+      "delete": "....Löschen ..Delete ...."
+    },
+    "login": {
+      "title": "....Login ..Login ....",
+      "email": "....E-Mail ..Email ....",
+      "password": "....Passwort ..Password ....",
+      "forgot_password": "....Haben Sie Ihr Passwort vergessen? ..Forgot your password? ....",
+      "sign_in": "....Anmelden ..Sign In ....",
+      "cancel": "....Zurück zum Shop ..Return to Store ....",
+      "guest_title": "....Als Gast fortsetzen ..Continue as a guest ....",
+      "guest_continue": "....Fortsetzen ..Continue ...."
+    },
+    "orders": {
+      "title": "....Bestellungen ..Order History ....",
+      "order_number": "....Bestellung ..Order ....",
+      "date": "....Datum ..Date ....",
+      "payment_status": "....Zahlungsstatus ..Payment Status ....",
+      "fulfillment_status": "....Lieferstatus ..Fulfillment Status ....",
+      "total": "....Gesamt ..Total ....",
+      "none": "....Sie haben noch keine Bestellungen aufgegeben. ..You haven't placed any orders yet. ...."
+    },
+    "order": {
+      "title": "....Bestellung {{ name }} ..Order {{ name }} ....",
+      "date": "....Aufgegeben am {{ date }} ..Placed on {{ date }} ....",
+      "cancelled": "....Bestellung storniert am {{ date }} ..Order Cancelled on {{ date }} ....",
+      "cancelled_reason": "....Grund: {{ reason }} ..Reason: {{ reason }} ....",
+      "billing_address": "....Rechnungsadresse ..Billing Address ....",
+      "payment_status": "....Zahlungsstatus ..Payment Status ....",
+      "shipping_address": "....Lieferadresse ..Shipping Address ....",
+      "fulfillment_status": "....Lieferstatus ..Fulfillment Status ....",
+      "discount": "....Rabatt ..Discount ....",
+      "shipping": "....Versand ..Shipping ....",
+      "tax": "....Steuern ..Tax ....",
+      "product": "....Artikel ..Product ....",
+      "sku": "....SKU ..SKU ....",
+      "price": "....Preis ..Price ....",
+      "quantity": "....Menge ..Quantity ....",
+      "total": "....Gesamt ..Total ....",
+      "fulfilled_at": "....Geliefert am {{ date }} ..Fulfilled {{ date }} ....",
+      "subtotal": "....Zwischensumme ..Subtotal ...."
+    },
+    "recover_password": {
+      "title": "....Passwort zurücksetzen ..Reset your password ....",
+      "email": "....E-Mail ..Email ....",
+      "submit": "....Absenden ..Submit ....",
+      "cancel": "....Abbrechen ..Cancel ....",
+      "subtext": "....Wir werden Ihnen eine E-Mail zum Zurücksetzen des Passworts schicken. ..We will send you an email to reset your password. ....",
+      "success": "....Wir haben Ihnen eine E-Mail mit einem Link zum Aktualisieren des Passworts geschickt. ..We've sent you an email with a link to update your password. ...."
+    },
+    "reset_password": {
+      "title": "....Account-Passwort zurücksetzen ..Reset account password ....",
+      "subtext": "....Geben Sie ein neues Passwort für {{ email }} ein ..Enter a new password for {{ email }} ....",
+      "password": "....Passwort ..Password ....",
+      "password_confirm": "....Passwort bestätigen ..Confirm Password ....",
+      "submit": "....Passwort zurücksetzen ..Reset Password ...."
+    },
+    "register": {
+      "title": "....Account erstellen ..Create Account ....",
+      "first_name": "....Vorname ..First Name ....",
+      "last_name": "....Nachname ..Last Name ....",
+      "email": "....E-Mail ..Email ....",
+      "password": "....Passwort ..Password ....",
+      "submit": "....Erstellen ..Create ....",
+      "cancel": "....Zurück zum Shop ..Return to Store ...."
+    }
+  },
+  "homepage": {
+    "sections": {
+      "frontpage_title": "....Startseite-Zusammenstellung ..Frontpage Collection ....",
+      "featured_title": "....Ausgewählte Zusammenstellungen ..Featured Collections ....",
+      "news_title": "....Neueste Nachrichten ..Latest News ...."
+    },
+    "onboarding": {
+      "modal_title": "....Fast fertig... ..Almost there... ....",
+      "no_products_html": "....Sie haben keine Artikel in Ihrer Startseiten-Zusammenstellung. Dieser Platzhalter verschwindet, wenn Sie <a href=\"/admin/collections?tutorial=Frontpage\">dieser Zusammenstellung einen Artikel hinzufügen</a>. ..You have no products in your Frontpage collection. This placeholder will appear until you <a href=\"/admin/collections?tutorial=Frontpage\">add a product to this collection</a>. ....",
+      "add_product": "....Fügen Sie ein Produkt ..Add a Product ....",
+      "product_title": "....Beispielhafter Produkttitel ..Example Product Title ....",
+      "no_collections_html": "....Sie haben hier keine Zusammenstellungen zum Anzeigen. <a href=\"/admin/custom_collections\">Fügen Sie ein paar Zusammenstellungen</a> zur Standard-Startseite hinzu. ..You don't have any collections to show here. <a href=\"/admin/custom_collections\">Add some collections</a> to go along with the default Frontpage. ....",
+      "add_collection": "....Fügen Sie eine Sammlung ..Add a Collection ....",
+      "collection_title": "....Beispielhafter Zusammenstellungstitel ..Example Collection Title ...."
+    }
+  },
+  "layout": {
+    "navigation": {
+      "menu": "....Menü ..Menu ...."
+    },
+    "drawers": {
+      "browse": "....Durchsuchen ..Browse ....",
+      "close_menu": "....Menü schließen ..Close menu ...."
+    },
+    "cart": {
+      "title": "....Warenkorb ..Cart ....",
+      "items_count": "....[object Object] ..[object Object] ...."
+    },
+    "customer": {
+      "my_account": "....Mein Account ..My Account ....",
+      "account": "....Account ..Account ....",
+      "logged_in_as_html": "....Mein Konto ..Logged in as {{ first_name }} ....",
+      "log_out": "....Abmelden ..Log out ....",
+      "log_in": "....Anmelden / Registrieren ..Log in / Create account ....",
+      "create_account": "....Registrieren ..Create account ...."
+    },
+    "footer": {
+      "social_title": "....Bleiben Sie auf dem Laufenden ..Get Connected ....",
+      "newsletter_title": "....Newsletter ..Newsletter ....",
+      "accepted_payments": "....Akzeptierte Zahlungen ..Accepted Payments ...."
+    }
+  },
+  "products": {
+    "general": {
+      "previous_product_html": "....&larr; Vorheriger Artikel ..&larr; Previous Product ....",
+      "next_product_html": "....Nächster Artikel &rarr; ..Next Product &rarr; ....",
+      "from_text_html": "....Von {{ price }} ..From {{ price }} ....",
+      "sale_price": "....Sonderpreis ..Sale price ....",
+      "regular_price": "....Normaler Preis ..Regular price ...."
+    },
+    "product": {
+      "sold_out": "....Ausverkauft ..Sold Out ....",
+      "on_sale": "....Im Angebot ..On Sale ....",
+      "on_sale_from_html": "....<strong>Im Angebot</strong> ab {{ price }} ..<strong>On Sale</strong> from {{ price }} ....",
+      "unavailable": "....Nicht verfügbar ..Unavailable ....",
+      "compare_at": "....Vergleichen bei ..Compare at ....",
+      "quantity": "....Menge ..Quantity ....",
+      "add_to_cart": "....In den Warenkorb ..Add to Cart ...."
+    },
+    "variants": {
+      "color_info": "....Dieses Produkt ist in mehreren Farben erhältlich. ..This product is available in several colors. ....",
+      "motiv_info": "....Dieses Produkt ist mit unterschiedlichen Motiven erhältlich. ..This product is available in several motive. ....",
+      "size_info": "....Dieses Produkt ist in verschiedenen Größen erhältlich. ..This product is available in several sizes. ....",
+      "kettenart_info": "....Zu diesem Produkt gibt es verschiedenen Kettenarten. ..This product is available in several track types. ....",
+      "other_info": "....Dieses Produkt ist in mehreren Varianten \"{{ variant }}\" erhältlich. ..This product is available in several variants: \"{{ variant }}\". ...."
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "....Hier ist Ihre {{ value }} Geschenkkarte für {{ shop }}! ..Here's your {{ value }} gift card for {{ shop }}! ....",
+      "subtext": "....Hier ist Ihre Geschenkkarte! ..Here's your gift card! ....",
+      "disabled": "....Deaktiviert ..Disabled ....",
+      "expired": "....Abgelaufen am {{ expiry }} ..Expired on {{ expiry }} ....",
+      "active": "....Läuft ab am {{ expiry }} ..Expires on {{ expiry }} ....",
+      "redeem": "....Nutzen Sie an der Kasse diesen Code, um Ihre Geschenkkarte einzulösen ..Use this code at checkout to redeem your gift card ....",
+      "shop_link": "....Einkauf beginnen ..Start shopping ....",
+      "print": "....Drucken ..Print ...."
+    }
+  },
+  "date_formats": {
+    "month_day_year": {
+      "0": "....% ..% ....",
+      "1": "....B ..B ....",
+      "2": "....  ..  ....",
+      "3": "....% ..% ....",
+      "4": "....d ..d ....",
+      "5": "...., .., ....",
+      "6": "....  ..  ....",
+      "7": "....% ..% ....",
+      "8": "....Y ..Y ...."
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "complete_purchase_button_label": "Kaufen / Complete order",
+        "page_title": "Bezahlung / Checkout",
+        "continue_button_label": "Weiter / Continue",
+        "edit_link_label": "Bearbeiten / Edit",
+        "all_rights_reserved": "Alle Rechte vorbehalten {{ shop_name }}",
+        "print_policies_link_label": "Drucken / Print",
+        "cart": "Warenkorb / Cart",
+        "close_modal_label": "Schließen / Close",
+        "continue_to_shipping_method": "Weiter zu Versandart / Continue to shipping method",
+        "continue_to_payment_method": "Weiter zu Zahlungsart / Continue to payment method",
+        "continue_to_review": "Auftrag überprüfen / Review order",
+        "back_to_cart": "Zurück zum Warenkorb / Return to cart",
+        "back_to_contact_information": "Zurück zu den Kontaktinformationen / Return to customer information",
+        "back_to_shipping_method": "Zurück zu Versandart / Return to shipping method",
+        "back_to_payment_method": "Zurück zu Zahlungsart / Return to payment method",
+        "edit_shipping_address": "Kontaktinformationen bearbeiten / Edit shipping address",
+        "edit_shipping_method": "Versandart bearbeiten / Edit shipping method",
+        "edit_payment_method": "Zahlungsart bearbeiten / Edit payment method",
+        "edit_billing_address": "Rechnungsadresse bearbeiten / Edit billing address",
+        "contact_us_html": "Kontaktieren Sie uns für weitere Informationen / Contact us for more information",
+        "consent_notice_for_european_customers": "Indem ich fortfahre, willige ich ein, dass meine Informationen in die Vereinigten Staaten gesendet werden. / By continuing, I agree that my information will be transferred to the United States."
+      },
+      "contact": {
+        "title": "Kundeninformationen / ",
+        "address_title": "Adresse / Address",
+        "country_placeholder": "Land / Country",
+        "shipping_address_title": "Lieferadresse / Shipping address",
+        "customer_information_title": "Kundeninformationen / Customer information",
+        "email_label": "E-Mail / Email",
+        "email_placeholder": "E- Mail / Email",
+        "stored_addresses_label": "Gespeicherte Adressen / Stored adresses",
+        "new_address_label": "Neue Adresse... / New address",
+        "first_name_label": "Vorname / First Name",
+        "optional_first_name_label": "Vorname / First Name",
+        "first_name_placeholder": "Vorname / First Name",
+        "optional_first_name_placeholder": "Vorname / First Name",
+        "last_name_label": "Nachname / Last name",
+        "last_name_placeholder": "Nachname / Last name",
+        "company_label": "Firma / Company",
+        "optional_company_label": "Firma (optional) / Company (optional)",
+        "company_placeholder": "Firma / Company",
+        "optional_company_placeholder": "Firma (optional) / Company (optional)",
+        "address1_label": "Adresse / address",
+        "address1_placeholder": "Adresse / address",
+        "address2_label": "Wohnung, Zimmer, usw. / Apt, suite, etc.",
+        "optional_address2_label": "Wohnung, Zimmer, usw. (optional) / Apt, suite, etc. (optional)",
+        "address2_placeholder": "Wohnung, Zimmer, usw. / Apt, suite, etc",
+        "optional_address2_placeholder": "Wohnung, Zimmer, usw. (optional) / Apt, suite, etc. (optional)",
+        "city_label": "Stadt / City",
+        "city_placeholder": "Stadt / City",
+        "country_label": "Land / Country",
+        "province_label": "Bundesland / Province",
+        "province_placeholder": "Bundesland / Province",
+        "phone_label": "Telefon / Phone",
+        "optional_phone_label": "Telefon (optional) / Phone (optional)",
+        "phone_placeholder": "Telefon / Phone",
+        "optional_phone_placeholder": "Telefon (optional) / Phone (optional)",
+        "zip_code_placeholder": "Postleitzahl / Zip Code",
+        "postal_code_placeholder": "Postleitzahl / Postal code",
+        "postcode_placeholder": "Postleitzahl / Postcode"
+      },
+      "customer_account": {
+        "not_user_label": "Nicht {{ first_name }}? / Not {{ first_name }}?",
+        "email_suggestion": "Meinten Sie {{ suggestion }}? / Did you mean {{ suggestion }}?",
+        "have_an_account_label": "Haben Sie bereits ein Konto bei uns? / Already have an account with us?",
+        "sign_in_link_label": "Anmelden / Log in",
+        "sign_out_link_label": "Ausloggen / Log out",
+        "save_my_information_label": "Meine Informationen speichern und nächstes Mal schneller bezahlen / Save this information for faster checkout next time"
+      },
+      "stock": {
+        "page_title": "Vorratsprobleme / Inventory issues",
+        "title": "Vorratsprobleme / Inventory issues",
+        "items_unavailable_notice": "Einige dieser Produkte sind nicht mehr verfügbar und Ihr Warenkorb wurde aktualisiert. / Some products became unavailable and your cart has been updated. We're sorry for the inconvenience.",
+        "product_column_header": "Produkte / Products",
+        "quantity_column_header": "Anzahl / Quantity",
+        "price_column_header": "Preis / Price",
+        "status_column_header": "Satus / Status",
+        "removed_from_cart_notice": "Aus dem Warenkorb entfernt / Removed from the cart",
+        "sold_out_label": "Ausverkauft / Sold out",
+        "reduced_label": "Reduziert / Reduced",
+        "reduced_with_quantity_label": "Nur {{ quantity_available }} übrig / Only {{ quantity_available }} left",
+        "remove_from_cart_button_label": "Aus dem Warenkorb entfernen / Remove from cart",
+        "continue_shopping_button_label": "Fortfahren / Continue",
+        "go_back_to_cart_button_label": "Zurück zu meinem Warenkorb / Go back to my cart"
+      },
+      "order_summary": {
+        "title": "Zusammenfassung Ihrer Bestellung / Order summary",
+        "order_name_label": "Bestellung {{ name }} / Order {{ name }}",
+        "discount_title": "Rabatt / Discount",
+        "discount_label": "Rabatt / Discount",
+        "discount_placeholder": "Rabatt / Discount",
+        "gift_card_title": "Geschenkkarte / Gift card",
+        "gift_card_label": "Geschenkkarte / Gift card",
+        "gift_card_and_discount_title": "Geschenkkarte oder Rabattcode / Gift card or discount cod",
+        "gift_card_and_discount_label": "Geschenkkarte oder Rabattcode / Gift card or discount cod",
+        "show_discount_form_link_label": "haben Sie noch einen Rabatt-Coupon? Geben Sie ihn hier an / Have a discount code? Click here to enter it",
+        "remove_gift_card_label": "Geschenkkarte löschen / Clear gift card",
+        "remove_discount_label": "Rabatt entfernen / Remove discount",
+        "free_shipping_discount_label": "Kostenfreier Versand / Free shipping",
+        "apply_discount_button_label": "Anwende / Apply",
+        "cart_does_not_meet_discount_requirements_notice": "Ihr Warenkorb erfüllt nicht die Vorraussetzungen für den {{ code }}- Rabattcode",
+        "discount_requires_customer_notice": "Bitte übermitteln Sie Ihre Versandangaben um den {{ code }} - Rabattcode anzuwenden / Please submit your shipping information to apply the {{ code }} discount code",
+        "customer_does_not_meet_discount_requirements_notice": "Die Kundendate erfüllen nicht die Vorraussetzungen für den {{ code }} - Rabattcode / Customer information does not meet the requirements for the {{ code }} discount code",
+        "shipping_information_does_not_meet_discount_requirements_notice": "Die Versandangaben erfüllen nicht die Vorraussetzungen für den {{ code }} - Rabattcode / Your shipping information does not meet the requirements for the {{ code }} discount code",
+        "subtotal_label": "Zwischensumme / Subtotal",
+        "shipping_label": "Versand / Shipping",
+        "taxes_label": "Steuern / Taxes",
+        "total_label": "Gesamt / Total",
+        "free_total_label": "Kostenlos / Free",
+        "paid_label": "Bezahlt / Paid",
+        "payment_due_label": "Zahlbar bis / Payment due",
+        "vat_label_html": "Einschließlich {{ amount }} MwSt / Including {{ amount }} in taxes",
+        "discount_and_gift_card_savings_notice": "Nach {{ discount_amount }} Rabatt und {{ gift_card_amount }} in Form von Geschenkgutscheinen / After {{ discount_amount }} in discounts and {{ gift_card_amount }} in gift cards",
+        "discount_savings_notice": "Nach {{ discount_amount }} Rabatt",
+        "gift_card_savings_notice": "Nach {{ gift_card_amount }} in Form von Geschenkgutscheinen",
+        "description_label": "Beschreibung / Description",
+        "price_label": "Preis / Price",
+        "quantity_label": "Anzahl / Quantity",
+        "expand_order_summary": "Bestellzusammenfassung anzeigen / Show order summary",
+        "collapse_order_summary": "Bestellzusammenfassung verbergen / Hide order summary"
+      },
+      "shipping": {
+        "title": "Versand / Shipping method",
+        "waiting_on_rate_notice": "Bitte warten die verfügbaren Versandkosten werden abgefragt... / Please wait while we fetch available shipping rates…",
+        "no_rates_for_cart_or_destination_notice": "Für Ihren Warenkorb oder Ihr Lieferziel sind keine Versandarten verfügbar. / There are no shipping methods available for your cart or destination.",
+        "no_rates_for_country_notice": "Es tut uns leid, wir liefern nicht nach {{ country }}. / Sorry, we don't ship to {{ country }}."
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Fehler beim Zurücksetzen des Passwortes / Password reset error",
+        "no_account_found": "Kein Konto mit dieser Email gefunden. / No account found with that email.",
+        "invalid_password": "Passwort oder Passwortbestätigung ungültig / Invalid password or password confirmation",
+        "invalid_credentials": "Ungültige Zugangsdaten. / Invalid login credentials."
+      },
+      "address": {
+        "updated": "Adresse erfolgreich aktualisiert. / Successfully updated address.",
+        "error_updating": "Fehler beim aktualisieren der Adresse / Error updating address",
+        "created": "Adresse erfolgreich erstellt / Successfully created address",
+        "error_creating": "Fehler beim erstellen der Adresse. / Error creating address.",
+        "deleted": "Adresse erfolgreich gelöscht / Successfully deleted address",
+        "error_deleting": "Fehler beim Löschen der Adresse. / Error deleting address."
+      },
+      "order": {
+        "not_available": "Diese Bestellung ist nicht verfügbar / This order is not available",
+        "financial_status": {
+          "authorized": "Autorisiert / Authorized",
+          "pending": "Ausstehend / Pending",
+          "paid": "Bezahlt / Paid",
+          "unpaid": "Unbezahlt / Unpaid",
+          "voided": "Storniert / Voided",
+          "partially_paid": "Teilweise bezahlt / Partially paid",
+          "partially_refunded": "Teilweise erstattet / Partially refunded",
+          "refunded": "Erstattet / Refunded"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Erfüllt / Fulfilled",
+          "complete": "Vollständig / Complete",
+          "partial": "Teilweise / Partial",
+          "unfulfilled": "Offen / Unfulfilled",
+          "restocked": "Wieder verfügbar / Restocked"
+        },
+        "transaction_status": {
+          "success": "Erfolg / Success",
+          "pending": "Ausstehend / Pending",
+          "failure": "Störungsmeldung / Failure",
+          "error": "Fehler / Error"
+        },
+        "cancel_reason": {
+          "inventory": "Artikel nicht verfügbar / Items unavailable",
+          "fraud": "Falsche Bestellung / Fraudulent order",
+          "customer": "Bestellung vom Kunden geändert / storniert/Customer changed/cancelled order",
+          "other": "Sonstiges / Other"
+        }
+      },
+      "cart": {
+        "no_items_left": "Wir haben keine Artikel von {{ name }} übrig / We have no items of {{ name }} left",
+        "only_n_items_available": "Sie können dem Warenkorb nur {{ count }} {{ name }} hinzufügen / You can only add {{ count }} {{ name }} to the cart.",
+        "all_items_in_cart": "Alle {{ count }} {{ name }} befinden sich in Ihrem Warenkorb / All {{ count }} {{ name }} are in your cart.",
+        "empty_update": "kann leeren Warenkorb nich aktualisieren / cannot update empty cart",
+        "missing_parameters": "keine gültigen ID- oder Zeilenparameter / no valid id or line parameter",
+        "generic_error": "Warenkorb-Fehler / Cart Error",
+        "too_many_line_items_error": "Ihr Warenkorb darf nicht mehr als {{ max }} Artikel. / Your cart can't contain more than {{ max }} items.",
+        "link_expired": "Link abgelaufen / Link expired",
+        "link_no_longer_exists": "Link existiert nicht mehr / Link no longer exists.",
+        "stock_problems_html": "Einer oder mehrere Artikel sind nicht länger verfügbar. Wir haben einen <a href='{{ link }}'>aktualisierten Warenkorb erstellt </a>. / One or more items are no longer available. We've provided an <a href='{{ link }}'>updated cart</a>.",
+        "changed": "Warenkorb geändert / Cart changed",
+        "items_changed": "Einer oder Mehrere Artikel wurden geändert. / One or more items have changed.",
+        "product_sold_out": "Das Produkt '{{ name }}' ist Bereits ausverkauft / The product '{{ name }}' is already sold out",
+        "variant_not_found": "Kann die Variante nicht finden / Cannot find variant",
+        "shipping_address_not_required": "Dieser Einkaufswagen erfordert keinen Versand / This cart does not require shipping",
+        "shipping_address_invalid": "Ungültige Versandadresse / Invalid shipping address"
+      },
+      "storefront": {
+        "invalid_password": "Passwort inkorrekt, bitte erneut versuchen. / Password incorrect, please try again."
+      }
+    },
+    "page_titles": {
+      "products": "Produkte / Products",
+      "shopping_cart": "Ihr Warenkorb / Your Shopping Car",
+      "account": "Konto / Account",
+      "create_account": "Konto erstellen / Create Account",
+      "reset_account": "Konto zurücksetzen / Reset Account",
+      "addresses": "Adressen / Addresses",
+      "order": "Bestellung {{ name }} / Order {{ name }}",
+      "search": "Suchen / Search",
+      "collections": "Sammlungen / Collections",
+      "not_found": "404 Nicht gefunden / 404 Not Found"
+    },
+    "cart": {
+      "discounts_with_count": "{{ count }} Rabatte wurden berechnet / {{ count }} discounts have been applied"
+    },
+    "attributes": {
+      "email": "E-Mail / email",
+      "password": "Passwort / password",
+      "first_name": "Vorname / first name",
+      "last_name": "Nachname / last name",
+      "body": "Nachricht / body"
+    },
+    "addresses": {
+      "zip_code": "Postleitzahl / Zip code",
+      "postal_code": "Postleitzahl / Postal code",
+      "postcode": "Postleitzahl / Postcode",
+      "region": "Region / Region",
+      "prefecture": "Präfektur / Prefecture",
+      "province": "Provinz / Province",
+      "state": "Bundesland/Kanton / State",
+      "state_and_territory": "Staat/Teritorium / State/Territory",
+      "confirm": "Sind Sie sicher, dass Sie diese Adresse löschen möchten? / Are you sure you wish to delete this address?"
+    },
+    "errors": {
+      "blank": "darf nicht unausgefüllt sein / can´t be blank",
+      "credit_card_session_expired": "Die Kreditkartenautorisierung ist abgelaufen, bitte geben Sie Ihre Zahlungsinformation erneut ein. Ihre Karte wurde nicht belastet. / Credit card authorization has expired, please enter your payment information again. Your card has not been charged.",
+      "empty": "darf nicht leer sein / can't be empty",
+      "invalid_email": "muss gültige E-Mail-Adresse sein / must be a valid email address",
+      "discount_disabled": "Dieser Rabatt wurde deaktiviert / This discount has been disabled",
+      "discount_expired": "Dieser Rabatt ist nicht mehr gültig / This discount is not valid anymore",
+      "discount_limit_reached": "Dieser Rabatt hat seine Nutztungsgrenze erreicht / This discount has reached its usage limit",
+      "discount_not_found": "Konnte keinen gültigen Rabatt finden, der zum eingegebenen Code gehört / Unable to find a valid discount matching the code entered",
+      "gift_card_already_applied": "Der Code wurde bereits auf Ihre Bestellung angewendet / Code has already been applied to your checkout",
+      "gift_card_code_invalid": "Ungültiger Code / Code is invalid",
+      "gift_card_currency_mismatch": "{{ gift_card_currency }} Geschenkkarten könne nicht für {{ checkout_currency }} - Bestellungen verwendet werden / {{ gift_card_currency }} gift cards can't be applied on {{ checkout_currency }} orders",
+      "gift_card_depleted": "Es befindet sich kein Guthaben mehr auf dieser Geschenkkarte / There are no funds left on this gift card",
+      "gift_card_disabled": "Geschenkkarte ist gesperrt / Gift card is disabled",
+      "gift_card_expired": "Geschenkkarte ist abgelaufen / Gift card is expired",
+      "invalid": "ist ungültig / is invalid",
+      "taken": "wurde bereits in Anspruch genommen / has already been taken",
+      "contains_html_tags": "darf keine HTML-Tags enthalten / cannot contain HTML tags",
+      "too_short": "ist zu kurz (Untergrenze ist {{ count }} Zeichen) / is too short (minimum is {{ count }} characters)",
+      "too_long": "ist zu lang (Obergrenze sind {{ count }} Zeichen) / is too long (maximum is {{ count }} characters)",
+      "contains_spaces": "enthält Leerzeichen / contains spaces",
+      "email_domain_invalid": "Anbieter wird nicht unterstützt / provider is not supported",
+      "invalid_for_country": "ist nicht gültig für {{ country }} / is not valid for {{ country }}",
+      "invalid_for_country_and_province": "ist nicht gültig für {{ province }} und {{ country }} / is not valid for {{ province }} and {{ country }}",
+      "invalid_province_in_country": "ist keine gültige Provinz in {{ country }} / is not a valid province in {{ country }}",
+      "invalid_state_in_country": "ist keine gültiger Staat in {{ country }} / is not a valid state in {{ country }}",
+      "invalid_region_in_country": "ist keine gültige Region in {{ country }} / is not a valid region in {{ country }}",
+      "less_than_or_equal_to": "muss kleiner oder gleich {{ count }} sein",
+      "not_supported": "wird nicht unterstütz / is not supported"
+    }
+  }
+}
