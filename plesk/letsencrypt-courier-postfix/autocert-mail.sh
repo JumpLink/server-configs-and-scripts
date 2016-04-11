@@ -25,7 +25,7 @@ service apache2 stop
 # Startet Apache2 wieder
 service apache2 start
 
-# Altes letsencrypt Zertifikat löschen falls vorhanden
+# Altes letsencrypt Zertifikat verschieben falls vorhanden
 if [ -f /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem ]
 then
   mv /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem.$(timestamp)
