@@ -2,3 +2,4 @@ htpasswd
 .sass-cache/
 node_modules/
 letsencrypt.log
+mysql_dumps/
