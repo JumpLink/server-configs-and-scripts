@@ -5,7 +5,7 @@ var path = require('path');
 var mkdirp = require('mkdirp');
 var async = require('async');
 var moment = require('moment');
-var JSFtp = require("jsftp"); // https://github.com/sergi/jsftp
+var FtpClient = require('ftp'); // https://github.com/mscdex/node-ftp
 var archiver = require('archiver'); // https://github.com/archiverjs/node-archiver
 
 var backupFtpOptions = require('./backupFtpOptions.json');
@@ -43,55 +43,45 @@ var getDatabases = function (connection, cb) {
     }); 
 }
 
-var mysqlDumps = function(databases, mysqlOptions, cb) {
+mkdirpFtp = function(Ftp, dir, cb) {
+    console.log("ftp: mkdir "+dir);
+    Ftp.mkdir(dir, true, cb);
+}
+
+uploadZip = function (Ftp, mysqlOptions, cb) {
+    var dest = path.join('/mysql_dumps', mysqlOptions.zipFilename);
+    console.log("ftp: "+mysqlOptions.zipFilename+" -> ftp://"+dest);
+    Ftp.put(mysqlOptions.zipDest, dest, cb);
+}
+
+var mysqlDumps = function(Ftp, databases, mysqlOptions, cb) {
     var timestamp = getTimestamp();
     mkdirp(mysqlOptions.destDir, function (err) {
         if (err) return cb(err)
-
-        async.mapSeries(databases, function(database, callback) {
-            mysqlOptions.database = database;
-            mysqlOptions.dest = path.join(mysqlOptions.destDir, database+"_"+timestamp+".sql");
-            console.log("mysql dump: "+database+" -> "+mysqlOptions.dest);
-            mysqlDump(mysqlOptions, function(err) {
-                if (err) return cb(err);
-                // create zip
-                var zipArchive = archiver('zip');
-                mysqlOptions.zipFilename = database+"_"+timestamp+".zip");
-                mysqlOptions.zipDest = path.join(mysqlOptions.destDir,  mysqlOptions.zipFilename);
-                var zipOutput = fs.createWriteStream(mysqlOptions.zipDest);
-                zipOutput.on('close', function() {
-                    console.log("zip: "+mysqlOptions.dest+" -> "+mysqlOptions.zipDest+" ("+zipArchive.pointer()+" total bytes)");
-                    callback(null, mysqlOptions);
+        mkdirpFtp(Ftp, '/mysql_dumps', function() {
+            async.eachSeries(databases, function(database, callback) {
+                mysqlOptions.database = database;
+                mysqlOptions.dest = path.join(mysqlOptions.destDir, database+"_"+timestamp+".sql");
+                console.log("mysql dump: "+database+" -> "+mysqlOptions.dest);
+                mysqlDump(mysqlOptions, function(err) {
+                    if (err) return cb(err);
+                    // create zip
+                    var zipArchive = archiver('zip');
+                    mysqlOptions.zipFilename = database+"_"+timestamp+".zip";
+                    mysqlOptions.zipDest = path.join(mysqlOptions.destDir,  mysqlOptions.zipFilename);
+                    var zipOutput = fs.createWriteStream(mysqlOptions.zipDest);
+                    zipOutput.on('close', function() {
+                        console.log("zip: "+mysqlOptions.dest+" -> "+mysqlOptions.zipDest+" ("+zipArchive.pointer()+" total bytes)");
+                        uploadZip(Ftp, mysqlOptions, callback);
+                    });
+                    zipArchive.on('error', callback);
+                    zipArchive.pipe(zipOutput);
+                    zipArchive.file(mysqlOptions.dest, {name: database+"_"+timestamp+".sql"}).finalize();
                 });
-                zipArchive.on('error', callback);
-                zipArchive.pipe(zipOutput);
-                zipArchive.file(mysqlOptions.dest, {name: database+"_"+timestamp+".sql"}).finalize();
-            });
-            
-        }, cb);
+                
+            }, cb);
+        });
     });
-}
-
-mkdirpFtp = function(FTP, dir, cb) {
-    Ftp.raw.mkd(dir, function(err, data) {
-        if (err) console.error(err);
-
-        console.log(data.text); // Show the FTP response text to the user
-        console.log(data.code); // Show the FTP response code to the user
-        cb(err, data);
-    });
-}
-
-uploadZips = function (mysqlOptionsArray, cb) {
-    var Ftp = new JSFtp(backupFtpOptions);
-    mkdirpFtp(Ftp, '/mysql_dumps', function(err, data) {
-        if(err) return cb(err);
-        async.each(mysqlOptionsArray, function(mysqlOptions, callback) {
-            ftp.put(mysqlOptions.zipDest, path.join('/mysql_dumps', mysqlOptions.zipFilename), callback);
-        }, cb);
-
-    });
-    
 }
 
 getPleskMySQLPassword(function(err, pw) {
@@ -101,12 +91,21 @@ getPleskMySQLPassword(function(err, pw) {
     getDatabases(connection, function(err, databases) {
         connection.end();
         if (err) throw err;
-        mysqlDumps(databases, mysqlOptions, function(err, mysqlOptionsArray) {
-            if (err) throw err;
-            console.log("done", mysqlOptionsArray);
-            process.exit(0);
+        var Ftp = new FtpClient();
+        Ftp.on('ready', function() {
+            mysqlDumps(Ftp, databases, mysqlOptions, function(err, results) {
+                if (err) throw err;
+                console.log("done");
+                Ftp.end();
+            });
         });
-        
+        Ftp.on('ready', function() {
+            Ftp.on('close', function(err) {
+                if(err) throw err;
+                process.exit(0);
+            });
+        });
+        Ftp.connect(backupFtpOptions);
     }); 
 });
 
