@@ -50,7 +50,7 @@ mkdirpFtp = function(Ftp, dir, cb) {
 
 uploadZip = function (Ftp, mysqlOptions, cb) {
     var dest = path.join('/mysql_dumps', mysqlOptions.zipFilename);
-    console.log("ftp: "+mysqlOptions.zipFilename+" -> ftp://"+dest);
+    console.log("ftp: "+mysqlOptions.zipFilename+" -> ftp://"+backupFtpOptions.host+dest);
     Ftp.put(mysqlOptions.zipDest, dest, cb);
 }
 
