@@ -58,24 +58,53 @@ var encrypt = function(domains, email, cb) {
     
     
     console.log(command);
-    // exec( command, function(error, stdout, stderr) {
-    //     if(error) {
-    //         return cb(new Error(error));
-    //     }
-    //     if(stderr) {
-    //         return cb(new Error(stderr));
-    //     }
-    //     if(stdout) {
-    //         console.log(stdout);
-    //     }
-    //     return cb(null);
-    // });
+    exec( command, function(error, stdout, stderr) {
+        if(error) {
+            return cb(new Error(error));
+        }
+        if(stderr) {
+            return cb(new Error(stderr));
+        }
+        if(stdout) {
+            console.log(stdout);
+        }
+        return cb(null);
+    });
     cb(null);
 }
 
 var domains = ['mediamor.de'];
 
 console.log("Domains\n", domains);
+
+var moveCerts = function (domains, cb) {
+
+    var commands = "cat /etc/letsencrypt/live/"+domains[0]+"/privkey.pem /etc/letsencrypt/live/"+domains[0]+"/fullchain.pem > /etc/letsencrypt/live/"+domains[0]+"/fullchain1-and-privkey1.pem;";
+    
+    commands += "mv /etc/postfix/postfix_default.pem /etc/postfix/postfix_default.pem.backup;";
+    commands += "ln -s newCertPath /etc/postfix/postfix_default.pem;";
+
+    commands += "mv /etc/dovecot/private/ssl-cert-and-key.pem /etc/dovecot/private/ssl-cert-and-key.pem.backup;";
+    commands += "ln -s /etc/letsencrypt/live/"+domains[0]+"/fullchain1-and-privkey1.pem /etc/dovecot/private/ssl-cert-and-key.pem;";
+
+    commands += "service dovecot restart";
+
+
+    console.log(commands);
+    exec( commands, function(error, stdout, stderr) {
+        if(error) {
+            return cb(new Error(error));
+        }
+        if(stderr) {
+            return cb(new Error(stderr));
+        }
+        if(stdout) {
+            console.log(stdout);
+        }
+        return cb(null);
+    });
+
+}
 
 stopNginx(function(err) {
     if(err) {
@@ -87,23 +116,20 @@ stopNginx(function(err) {
             throw err;
         }
         
-        var newCertPath = "/etc/letsencrypt/live/"+domains[0]+"/fullchain.pem";
-                
-        startNginx(function(err) {
+	    moveCerts(domains, function(err) {
             if(err) {
                 throw err;
             }
-            // cat /etc/letsencrypt/live/mediamor.de/privkey.pem /etc/letsencrypt/live/mediamor.de/fullchain.pem > /etc/letsencrypt/live/mediamor.de/fullchain1-and-privkey1.pem
-            
-            // mv /etc/postfix/postfix_default.pem /etc/postfix/postfix_default.pem.backup
-            // ln -s newCertPath /etc/postfix/postfix_default.pem
-            
-            // mv /etc/dovecot/private/ssl-cert-and-key.pem /etc/dovecot/private/ssl-cert-and-key.pem.backup
-            // ln -s /etc/letsencrypt/live/mediamor.de/fullchain1-and-privkey1.pem /etc/dovecot/private/ssl-cert-and-key.pem
-            
-            // sudo service dovecot restart
-            // sudo service postfix restart
+
+            startNginx(function(err) {
+                if(err) {
+                    throw err;
+                }
+            });
+
         });
+
+
     });
 });
 
