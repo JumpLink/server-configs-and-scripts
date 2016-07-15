@@ -24,16 +24,16 @@ then
 fi
 
 # Private Key und Zertifikat zusammen fügen
-cat /etc/letsencrypt/live/mediamor.de/privkey.pem /etc/letsencrypt/live/mediamor.de/fullchain.pem > /etc/letsencrypt/live/mediamor.de/fullchainprivkey.pem;
+cat /etc/letsencrypt/live/${DOMAINS[0]}/privkey.pem /etc/letsencrypt/live/${DOMAINS[0]}/fullchain.pem > /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem;
 
 # Postfix Certs
 mv /etc/postfix/postfix_default.pem /etc/postfix/postfix_default.pem.backup.$(timestamp);
 # Symbolischen Link anlegen
-ln -s /etc/letsencrypt/live/mediamor.de/fullchainprivkey.pem /etc/postfix/postfix_default.pem;
+ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/postfix/postfix_default.pem;
 
 # Dovecot Certs
 mv /etc/dovecot/private/ssl-cert-and-key.pem /etc/dovecot/private/ssl-cert-and-key.pem.backup.$(timestamp);
-ln -s /etc/letsencrypt/live/mediamor.de/fullchainprivkey.pem /etc/dovecot/private/ssl-cert-and-key.pem;
+ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/dovecot/private/ssl-cert-and-key.pem;
 
 service dovecot restart
 service postfix restart
