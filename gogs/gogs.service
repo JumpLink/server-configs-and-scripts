@@ -1,3 +1,5 @@
+# cp gogs.service /etc/systemd/system/gogs.service
+# service gogs start
 [Unit]
 Description=Gogs (Go Git Service)
 After=syslog.target
