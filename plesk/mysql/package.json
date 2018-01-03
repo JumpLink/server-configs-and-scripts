@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/JumpLink/server-configs-and-scripts#readme",
   "dependencies": {
-    "archiver": "^1.0.0",
-    "async": "^2.0.0-rc.3",
+    "@assignar/mysqldump": "github:assignar/mysqldump#v2",
+    "archiver": "^1.3.0",
+    "async": "^2.6.0",
     "ftp": "^0.3.10",
     "mkdirp": "^0.5.1",
-    "moment": "^2.12.0",
-    "mysql": "^2.10.2",
-    "mysqldump": "github:webcaetano/mysqldump"
+    "moment": "^2.20.1",
+    "mysql": "^2.15.0"
   }
 }

@@ -4,3 +4,5 @@ node_modules/
 letsencrypt.log
 mysql_dumps/
 backupFtpOptions.json
+package-lock.json 
+
