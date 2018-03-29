@@ -27,13 +27,18 @@ fi
 cat /etc/letsencrypt/live/${DOMAINS[0]}/privkey.pem /etc/letsencrypt/live/${DOMAINS[0]}/fullchain.pem > /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem;
 
 # Postfix Certs
-mv /etc/postfix/postfix_default.pem /etc/postfix/postfix_default.pem.backup.$(timestamp);
+mv /etc/postfix/postfix.pem /etc/postfix/postfix.pem.backup.$(timestamp);
 # Symbolischen Link anlegen
-ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/postfix/postfix_default.pem;
+ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/postfix/postfix.pem;
 
 # Dovecot Certs
 mv /etc/dovecot/private/ssl-cert-and-key.pem /etc/dovecot/private/ssl-cert-and-key.pem.backup.$(timestamp);
 ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/dovecot/private/ssl-cert-and-key.pem;
+
+# new cert filename?
+mv /etc/dovecot/private/dovecot.pem /etc/dovecot/private/dovecot.pem.backup.$(timestamp);
+ln -s /etc/letsencrypt/live/${DOMAINS[0]}/fullchainprivkey.pem /etc/dovecot/private/dovecot.pem;
+
 
 service dovecot restart
 service postfix restart
